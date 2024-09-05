@@ -1,0 +1,15 @@
+/// Генерация переменных для root-vars.scss
+/// Также дублируется в _variables для удобного использования в scss
+/// Можно обойтись без дублирования, если вызывать через функцию color(color-name) напрямую из map, но так дольше писать xD
+$colors: (
+	"black": #000,
+	"white": #fff,
+	"gray": #b8b8b8,
+	"gray-light": #ececec,
+	"gold": #fbf0dd,
+);
+
+$svgs: (
+	// "star":
+	// 	url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 25'%3E%3Cpath fill='%23fff' d='m12.1.063 1.655 10.303L23.8 12.063 13.754 13.76 12.1 24.065 10.445 13.76.4 12.064l10.045-1.698L12.1.063Z'/%3E%3C/svg%3E"),
+);
