@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header {
+	background: $white;
+
+	// .header__wrapper
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding: 25px 0;
+		gap: 20px;
+	}
+
+	// .header__logo
+	&__logo {
+		display: flex;
+		align-items: center;
+		width: 130px;
+		flex: 0 0 auto;
+		z-index: 1;
+
+		@include resp-from(lg) {
+			width: 220px;
+		}
+
+		img {
+			height: auto;
+		}
+	}
+
+	// .header__nav
+	&__nav {
+		display: flex;
+		align-items: center;
+		// position: relative;
+	}
+}
