@@ -1,0 +1,39 @@
+ul.breadcrumb {
+	text-transform: uppercase;
+	margin: 70px 0 0;
+	padding: 0;
+	list-style-type: none;
+
+	li {
+		display: inline;
+		font-weight: 500;
+
+		@include resp-from(md) {
+		font-size: rem(18);
+			
+		}
+		@include resp-from(lg) {
+		font-size: rem(20);
+			
+		}
+		@include resp-from(xl) {
+		font-size: rem(25);
+			
+		}
+
+		& + li:before {
+			padding: 8px;
+			color: $gray;
+			content: "/\00a0";
+		}
+
+		a {
+			color: $gray;
+			text-decoration: none;
+
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+}
