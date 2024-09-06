@@ -49,22 +49,22 @@ main {
  * Selections
  */
 ::-moz-selection {
-	background: $gray;
+	background: $gold;
 	color: $black;
 }
 
 ::selection {
-	background: $gray;
+	background: $gold;
 	color: $black;
 }
 
 img::-moz-selection {
-	background: rgba($gray, 0.5);
+	background: rgba($gold, 0.5);
 	color: transparent;
 }
 
 img::selection {
-	background: rgba($gray, 0.5);
+	background: rgba($gold, 0.5);
 	color: transparent;
 }
 
