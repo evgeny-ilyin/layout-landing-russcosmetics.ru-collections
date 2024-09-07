@@ -1,0 +1,26 @@
+.mission {
+	position: relative;
+
+	// .mission__cards
+	&__cards {
+		display: grid;
+
+		@include resp-from(md) {
+			
+		}
+	}
+
+	// .mission__card
+	&__card {
+	}
+
+	// .mission__bgr
+	&__bgr {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url(../img/circles.svg) center no-repeat;
+	}
+}
