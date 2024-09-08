@@ -36,8 +36,8 @@ export const scss = () => {
 			.pipe(
 				//! isWebp() в /js/modules/functions.js
 				webpcss({
-					webpClass: ".webp",
-					noWebpClass: ".no-webp",
+					replace_from: /\.(png|jpg)/,
+					replace_to: ".webp",
 				})
 			)
 			.pipe(
