@@ -1,11 +1,12 @@
 import * as fn from "./modules/functions.js";
-import { useDynamicAdapt } from "./modules/dynamicAdapt.js";
+// import { useDynamicAdapt } from "./modules/dynamicAdapt.js";
 
 addEventListener("DOMContentLoaded", () => {
-	useDynamicAdapt();
+	// useDynamicAdapt();
 
-	fn.isTouchDevice();
-	fn.cardInfoHandler();
+	fn.isWebp();
+	// fn.isTouchDevice();
+	// fn.cardInfoHandler();
 
 	// fn.isWebp();
 	// fn.stickyHeader();

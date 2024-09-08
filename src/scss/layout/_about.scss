@@ -1,0 +1,75 @@
+.about {
+	margin: 65px 0 50px;
+
+	// .about__text
+	&__text {
+		@include resp-from(md) {
+			padding-left: 50px;
+		}
+		@include resp-from(xl) {
+			padding-left: 100px;
+		}
+
+		p {
+			font-size: rem(20);
+			margin-bottom: 40px;
+		}
+	}
+
+	// .about__header
+	&__header {
+		font-style: italic;
+		font-size: rem(40);
+		margin-bottom: 40px;
+	}
+
+	// .about__bottom
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: nowrap;
+		gap: 40px;
+		margin-top: 90px;
+
+		@include resp-from(lg) {
+			flex-direction: row;
+		}
+
+		&::before {
+			flex: 0 0 auto;
+			content: "";
+			display: block;
+			width: 180px;
+			height: 134px;
+			background: url(../img/about-decor-1.png) center / contain no-repeat;
+		}
+
+		&::after {
+			flex: 0 0 auto;
+			content: "";
+			display: block;
+			width: 189px;
+			height: 201px;
+			background: url(../img/about-decor-2.png) center / contain no-repeat;
+			margin-top: -20px;
+		}
+	}
+
+	// .about__bottom-text
+	&__bottom-text {
+		flex: 1 1 100%;
+		font-size: rem(22);
+		font-weight: 300;
+		text-align: center;
+
+		@include resp-from(md) {
+			font-size: rem(26);
+		}
+
+		@include resp-from(lg) {
+			font-size: rem(30);
+		}
+	}
+}
