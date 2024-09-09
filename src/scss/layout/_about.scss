@@ -1,26 +1,38 @@
 .about {
-	margin: 65px 0 50px;
+	margin: 35px 0 20px;
+
+	@include resp-from(xl) {
+		margin: 65px 0 50px;
+	}
 
 	// .about__text
 	&__text {
-		@include resp-from(md) {
-			padding-left: 50px;
-		}
 		@include resp-from(xl) {
 			padding-left: 100px;
 		}
 
 		p {
-			font-size: rem(20);
-			margin-bottom: 40px;
+			font-size: rem(16);
+			margin-bottom: 25px;
+
+			@include resp-from(lg) {
+				font-size: rem(20);
+				margin-bottom: 40px;
+			}
 		}
 	}
 
 	// .about__header
 	&__header {
 		font-style: italic;
-		font-size: rem(40);
-		margin-bottom: 40px;
+		font-size: clamp(rem(24), 3vw, rem(36));
+		font-size: clamp(rem(24), 3dvw, rem(36));
+		margin-bottom: 25px;
+
+		@include resp-from(xl) {
+			font-size: rem(40);
+			margin-bottom: 40px;
+		}
 	}
 
 	// .about__bottom
@@ -31,10 +43,14 @@
 		align-items: center;
 		flex-wrap: nowrap;
 		gap: 40px;
-		margin-top: 90px;
+		margin-top: 40px;
 
 		@include resp-from(lg) {
 			flex-direction: row;
+		}
+
+		@include resp-from(xl) {
+			margin-top: 90px;
 		}
 
 		&::before {
@@ -60,16 +76,8 @@
 	// .about__bottom-text
 	&__bottom-text {
 		flex: 1 1 100%;
-		font-size: rem(22);
+		font-size: clamp(rem(20), 2.2vw, rem(30));
 		font-weight: 300;
 		text-align: center;
-
-		@include resp-from(md) {
-			font-size: rem(26);
-		}
-
-		@include resp-from(lg) {
-			font-size: rem(30);
-		}
 	}
 }
