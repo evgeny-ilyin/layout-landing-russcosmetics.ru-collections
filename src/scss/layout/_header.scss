@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 .header {
 	background: $white;
+	z-index: 2;
 
 	// .header__wrapper
 	&__wrapper {
@@ -16,16 +17,12 @@
 	&__logo {
 		display: flex;
 		align-items: center;
-		width: 130px;
+		width: 125px;
 		flex: 0 0 auto;
 		z-index: 2;
 
 		@include resp-from(lg) {
-			width: 220px;
-		}
-
-		img {
-			height: auto;
+			width: 251px;
 		}
 	}
 
