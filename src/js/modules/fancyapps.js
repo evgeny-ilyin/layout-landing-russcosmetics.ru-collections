@@ -15,21 +15,13 @@ addEventListener("DOMContentLoaded", () => {
 
 	Fancybox.bind("[data-fancybox]", optionsBox);
 
-	let carouselBlock2 = document.getElementById("carouselBlock2");
-	new Carousel(carouselBlock2, {
-		l10n: ru,
-		infinite: true,
-		Navigation: true,
-		Dots: false,
-	});
-
-	let carouselBuy = document.getElementById("carouselBuy");
-	new Carousel(carouselBuy, {
+	let carousel = document.querySelector(".carousel");
+	new Carousel(carousel, {
 		l10n: ru,
 		slidesPerPage: 1,
 		infinite: true,
-		Navigation: false,
-		Dots: false,
-		center: false,
+		Navigation: true,
+		Dots: true,
 	});
+
 });

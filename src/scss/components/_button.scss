@@ -1,7 +1,28 @@
 .btn {
-	// .btn_default
-	&_default {
-		@include on-event {
+	background: $white;
+	border-radius: 5px;
+	font-size: rem(20);
+	line-height: 1;
+	text-align: center;
+	padding: 10px 25px;
+	width: 100%;
+	max-width: 250px;
+	transition: all $transition-default;
+	cursor: pointer;
+
+	@include resp-from(lg) {
+		font-size: rem(24);
+		padding: 14px 54px;
+		max-width: 365px;
+	}
+
+	// .btn_white
+	&_white {
+		background: $white;
+		border: 1px solid $black;
+
+		@include on-hover {
+			background: $gold;
 		}
 	}
 }

@@ -1,0 +1,20 @@
+// carousel overrides
+.f-carousel {
+	--f-carousel-slide-width: 100%;
+	--f-carousel-dot-color: #{$white};
+	--f-carousel-dot-opacity: 1;
+	--f-carousel-dot-hover-opacity: 1;
+	--f-button-width: 39px;
+	--f-button-height: 39px;
+	--f-button-svg-width: 39px;
+	--f-button-svg-height: 39px;
+	--f-button-svg-stroke-width: 0.5;
+	--f-carousel-dots-width: 13px;
+
+	@include resp-from(lg) {
+		--f-button-width: 59px;
+		--f-button-height: 59px;
+		--f-button-svg-width: 59px;
+		--f-button-svg-height: 59px;
+	}
+}
