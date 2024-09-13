@@ -19,7 +19,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
-		justify-content: center;
 		text-align: center;
 		padding: 0;
 		margin: 0;
@@ -27,6 +26,7 @@
 		@include resp-from(lg) {
 			border-left: 1px solid $black;
 			border-right: 1px solid $black;
+			justify-content: center;
 		}
 	}
 
@@ -54,8 +54,8 @@
 		}
 
 		span {
-			font-size: clamp(rem(25), 7vw, rem(40));
-			font-size: clamp(rem(25), 7dvw, rem(40));
+			font-size: clamp(rem(25), 6vw, rem(40));
+			font-size: clamp(rem(25), 6dvw, rem(40));
 			font-weight: 300;
 		}
 	}
@@ -79,7 +79,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-end;
 		padding: 0;
 	}
 
@@ -89,7 +89,7 @@
 
 		img {
 			width: auto;
-			max-height: 585px;
+			max-height: 600px;
 		}
 	}
 
@@ -98,9 +98,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		max-width: 600px;
+		max-width: 700px;
 		text-align: center;
 		margin-bottom: 70px;
+		padding: 0 20px;
 
 		@include resp-from(lg) {
 			margin-bottom: 39px;
@@ -145,6 +146,7 @@
 		height: 100%;
 		writing-mode: vertical-rl;
 		text-orientation: mixed;
+		white-space: nowrap;
 		z-index: -1;
 		transform: scale(-1);
 
@@ -153,10 +155,23 @@
 		}
 
 		@include resp-from(lg) {
+			font-size: rem(90);
 			height: auto;
 			top: 50%;
 			bottom: auto;
 			transform: translateY(-50%) scale(-1);
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(100);
+		}
+
+		@include resp-from(hd) {
+			font-size: rem(110);
+		}
+
+		@include resp-from(fhd) {
+			font-size: rem(120);
 		}
 	}
 }
