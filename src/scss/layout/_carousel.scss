@@ -7,6 +7,12 @@
 	border-top: 1px solid $black;
 	border-bottom: 1px solid $black;
 	border-right: 1px solid $black;
+	border-left: 1px solid $black;
+	
+	@include resp-from(lg) {
+		
+		border-left: 0;
+	}
 
 	// .carousel__slide
 	&__slide {
@@ -44,8 +50,8 @@
 		text-transform: uppercase;
 		background: $gradient-gold;
 		border-bottom: 1px solid $black;
-		border-left: 1px solid $black;
-		border-right: 1px solid $black;
+		// border-left: 1px solid $black;
+		// border-right: 1px solid $black;
 
 		@include resp-from(lg) {
 			border-left: 0;
@@ -151,7 +157,7 @@
 		transform: scale(-1);
 
 		@include resp-from(md) {
-			font-size: rem(116);
+			font-size: rem(90);
 		}
 
 		@include resp-from(lg) {
@@ -163,15 +169,21 @@
 		}
 
 		@include resp-from(xl) {
-			font-size: rem(100);
+			font-size: rem(96);
 		}
 
 		@include resp-from(hd) {
-			font-size: rem(110);
+			font-size: rem(105);
 		}
 
 		@include resp-from(fhd) {
-			font-size: rem(120);
+			font-size: rem(115);
+		}
+
+		&._text-long {
+			@include resp-from(xl) {
+				font-size: rem(80) !important;
+			}
 		}
 	}
 }
