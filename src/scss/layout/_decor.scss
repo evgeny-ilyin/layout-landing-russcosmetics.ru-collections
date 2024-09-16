@@ -1,0 +1,432 @@
+.c-decor {
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	// .c-decor__avocado-left
+	&__avocado-left {
+		&::before {
+			left: 20px;
+			top: 25%;
+			width: 149px;
+			height: 116px;
+			background-image: url(../img/decor/decor-avocado.png);
+		}
+	}
+
+	// .c-decor__avocado-left-bottom
+	&__avocado-left-bottom {
+		&::before {
+			left: 20%;
+			bottom: 30%;
+			width: 143px;
+			height: 113px;
+			background-image: url(../img/decor/decor-avocado.png);
+		}
+
+		&._av-2 {
+			&::before {
+				left: 10%;
+				bottom: 40%;
+				width: 170px;
+				height: 133px;
+			}
+		}
+
+		&._av-3 {
+			&::before {
+				left: 16%;
+				bottom: 35%;
+				width: 205px;
+				height: 161px;
+			}
+		}
+
+		&._av-4 {
+			&::before {
+				left: 10%;
+				bottom: 35%;
+				width: 129px;
+				height: 100px;
+			}
+		}
+	}
+
+	// .c-decor__avocado-right
+	&__avocado-right {
+		&::before {
+			left: 60%;
+			top: 55%;
+			width: 204px;
+			height: 159px;
+			background-image: url(../img/decor/decor-avocado.png);
+		}
+	}
+
+	// .c-decor__avocado-right-center
+	&__avocado-right-center {
+		&::before {
+			left: 50%;
+			top: 35%;
+			width: 220px;
+			height: 172px;
+			background-image: url(../img/decor/decor-avocado.png);
+		}
+	}
+
+	// .c-decor__lemon-left
+	&__lemon-left {
+		&::before {
+			left: 10%;
+			top: 25%;
+			width: 127px;
+			height: 92px;
+			background-image: url(../img/decor/decor-lemon.png);
+			transform: rotate(70deg);
+		}
+	}
+
+	// .c-decor__lemon-right
+	&__lemon-right {
+		&::before {
+			left: 63%;
+			top: 25%;
+			width: 247px;
+			height: 180px;
+			background-image: url(../img/decor/decor-lemon.png);
+			transform: scaleX(-1);
+		}
+	}
+
+	// .c-decor__rosem-left
+	&__rosem-left {
+		&::before {
+			left: 5%;
+			top: 1%;
+			width: 252px;
+			height: 207px;
+			background-image: url(../img/decor/decor-rosem.png);
+			transform: scale(-1) rotate(20deg);
+		}
+
+		&._rm-2 {
+			&::before {
+				top: 7%;
+				width: 198px;
+				height: 163px;
+				transform: scaleY(-1) rotate(-250deg);
+			}
+		}
+	}
+
+	// .c-decor__rosem-right
+	&__rosem-right {
+		&::before {
+			left: 57%;
+			top: 25%;
+			width: 246px;
+			height: 203px;
+			background-image: url(../img/decor/decor-rosem.png);
+			transform: rotate(-90deg);
+		}
+
+		&._rm-2 {
+			&::before {
+				left: 57%;
+				width: 198px;
+				height: 163px;
+			}
+		}
+	}
+
+	// .c-decor__coconut-top-right
+	&__coconut-top-right {
+		&::before {
+			right: 15%;
+			top: 5%;
+			width: 130px;
+			height: 90px;
+			background-image: url(../img/decor/decor-coconut.png);
+			transform: rotate(20deg);
+		}
+	}
+
+	// .c-decor__wheat-left-center
+	&__wheat-left-center {
+		&::before {
+			left: 25%;
+			top: 25%;
+			width: 156px;
+			height: 152px;
+			background-image: url(../img/decor/decor-wheat.png);
+			transform: scaleX(-1) rotate(90deg);
+		}
+	}
+
+	// .c-decor__goji-left
+	&__goji-left {
+		&::before {
+			left: 5%;
+			top: 22%;
+			width: 207px;
+			height: 163px;
+			background-image: url(../img/decor/decor-goji.png);
+			transform: scaleX(-1) rotate(-20deg);
+		}
+	}
+
+	// .c-decor__olive-left
+	&__olive-left {
+		&::before {
+			left: 10%;
+			top: 15%;
+			width: 207px;
+			height: 163px;
+			background-image: url(../img/decor/decor-olive.png);
+		}
+
+		&._ol-2 {
+			&::before {
+				left: 5%;
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	// .c-decor__olive-left-center
+	&__olive-left-center {
+		&::before {
+			left: 20%;
+			top: 25%;
+			width: 207px;
+			height: 163px;
+			background-image: url(../img/decor/decor-olive.png);
+		}
+	}
+
+	// .c-decor__bergamot-left
+	&__bergamot-left {
+		&::before {
+			left: 20%;
+			top: 20%;
+			width: 155px;
+			height: 168px;
+			background-image: url(../img/decor/decor-bergamot.png);
+		}
+	}
+
+	// .c-decor__bergamot-left-center
+	&__bergamot-left-center {
+		&::before {
+			left: 20%;
+			top: 30%;
+			width: 100px;
+			height: 108px;
+			background-image: url(../img/decor/decor-bergamot.png);
+			transform: scaleX(-1);
+		}
+	}
+
+	// .c-decor__bergamot-left-right
+	&__bergamot-left-right {
+		&::before {
+			left: 10%;
+			top: 20%;
+			width: 163px;
+			height: 176px;
+			background-image: url(../img/decor/decor-bergamot.png);
+		}
+
+		&::after {
+			right: 20%;
+			top: 55%;
+			width: 127px;
+			height: 137px;
+			background-image: url(../img/decor/decor-bergamot.png);
+			transform: scaleX(-1);
+		}
+	}
+
+	// .c-decor__grapefruit-left-right
+	&__grapefruit-left-right {
+		&::before {
+			left: 7%;
+			top: 35%;
+			width: 145px;
+			height: 117px;
+			background-image: url(../img/decor/decor-grapefruit.png);
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			right: 30%;
+			top: 30%;
+			width: 145px;
+			height: 117px;
+			background-image: url(../img/decor/decor-grapefruit.png);
+			transform: scaleX(-1) rotate(-60deg);
+		}
+	}
+
+	// .c-decor__grapefruit-2-left-bottom
+	&__grapefruit-2-left-bottom {
+		&::before {
+			left: 13%;
+			top: 46%;
+			width: 227px;
+			height: 169px;
+			background-image: url(../img/decor/decor-grapefruit-2.png);
+		}
+	}
+
+	// .c-decor__bergamot-rosem-left-right-bottom
+	&__bergamot-rosem-left-right-bottom {
+		&::before {
+			left: 20%;
+			top: 46%;
+			width: 159px;
+			height: 173px;
+			background-image: url(../img/decor/decor-bergamot.png);
+		}
+
+		&::after {
+			right: 16%;
+			top: 30%;
+			width: 240px;
+			height: 196px;
+			background-image: url(../img/decor/decor-rosem.png);
+			transform: rotate(-90deg);
+		}
+	}
+
+	// .c-decor__bergamot-rosem-left-right-center
+	&__bergamot-rosem-left-right-center {
+		&::before {
+			left: 15%;
+			top: 30%;
+			width: 171px;
+			height: 186px;
+			background-image: url(../img/decor/decor-bergamot.png);
+		}
+
+		&::after {
+			right: 25%;
+			top: 33%;
+			width:187px;
+			height: 154px;
+			background-image: url(../img/decor/decor-rosem.png);
+			transform: rotate(-90deg);
+		}
+	}
+
+	// .c-decor__bergamot-wheat-left-right
+	&__bergamot-wheat-left-right {
+		&::before {
+			left: 8%;
+			bottom: 20%;
+			width: 100px;
+			height: 109px;
+			background-image: url(../img/decor/decor-bergamot.png);
+		}
+
+		&::after {
+			right: 6%;
+			top: 11%;
+			width: 190px;
+			height: 185px;
+			background-image: url(../img/decor/decor-wheat.png);
+			transform: rotate(45deg);
+		}
+	}
+
+	// .c-decor__xz-verbena-left-right
+	&__xz-verbena-left-right {
+		&::before {
+			left: 0;
+			bottom: 10%;
+			width: 187px;
+			height: 176px;
+			background-image: url(../img/decor/decor-xz.png);
+		}
+
+		&::after {
+			right: 0;
+			top: 15%;
+			width: 239px;
+			height: 160px;
+			background-image: url(../img/decor/decor-verbena.png);
+			transform: scaleY(-1) rotate(-90deg);
+		}
+	}
+
+	// .c-decor__xz-verbena-left-center
+	&__xz-verbena-left-center {
+		&::before {
+			left: 0;
+			bottom: 10%;
+			width: 187px;
+			height: 176px;
+			background-image: url(../img/decor/decor-xz.png);
+		}
+
+		&::after {
+			right: 15%;
+			top: 30%;
+			width: 328px;
+			height: 220px;
+			background-image: url(../img/decor/decor-verbena.png);
+			transform: scaleY(-1) rotate(-90deg);
+		}
+	}
+
+		// .c-decor__pantenol
+		&__pantenol {
+			&::before {
+				left: 10%;
+				top: 10%;
+				width: 230px;
+				height: 230px;
+				background-image: url(../img/decor/decor-pantenol.png);
+			}
+	
+			&::after {
+				right: 20%;
+				top: 45%;
+				width: 123px;
+				height: 123px;
+				background-image: url(../img/decor/decor-pantenol.png);
+				transform: scale(-1) rotate(-20deg);
+			}
+		}
+	
+		// .c-decor__drop
+		&__drop {
+			&::before {
+				// left: -10%;
+				// top: 25%;
+				left: 32%;
+				top: 25%;
+				width: 160px;
+				height: 160px;
+				background-image: url(../img/decor/decor-drop.png);
+			}
+	
+			&::after {
+				// right: -25%;
+				// top: 55%;
+				right: 25%;
+				top: 42%;
+				width: 210px;
+				height: 210px;
+				background-image: url(../img/decor/decor-drop.png);
+			}
+		}
+}
