@@ -18,3 +18,9 @@
 		--f-button-svg-height: 59px;
 	}
 }
+
+// fancybox overrides
+.fancybox__container {
+	--fancybox-bg: rgba(0, 0, 0, 0.5);
+	--fancybox-content-color: #{$black};
+}

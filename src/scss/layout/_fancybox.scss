@@ -1,0 +1,141 @@
+.fancybox__content {
+	border-radius: 30px;
+	width: 90%;
+	min-height: 600px;
+	max-height: 90vh;
+	max-width: 1750px;
+	overflow: hidden;
+	padding: 0 20px;
+
+	.row {
+		height: 100%;
+		overflow: auto;
+		padding: 50px 40px;
+		z-index: 2;
+
+		& > :nth-child(2) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+.modal {
+	display: none;
+	position: relative;
+
+	// .modal__logo
+	&__logo {
+		&._left {
+			margin-bottom: 52px;
+		}
+	}
+
+	// .modal__header
+	&__header {
+		font-size: rem(60);
+		text-transform: uppercase;
+		margin-bottom: 35px;
+	}
+
+	// .modal__list
+	&__list {
+		margin-bottom: 25px;
+
+		// &:last-child {
+		// 	margin-bottom: 0;
+		// }
+	}
+
+	// .modal__subheader
+	&__subheader {
+		font-size: rem(20);
+		font-weight: 500;
+		text-transform: lowercase;
+		margin-bottom: 5px;
+	}
+
+	// .modal__desc
+	&__desc {
+		font-size: rem(15);
+		font-weight: 400;
+		padding-left: 22px;
+		text-transform: lowercase;
+	}
+
+	// .modal__info
+	&__info {
+		font-size: rem(20);
+		font-weight: 500;
+		margin-bottom: 18px;
+	}
+
+	// .modal__text
+	&__text {
+		font-size: rem(16);
+		font-weight: 400;
+		margin-bottom: 18px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// .modal__img
+	&__img {
+		display: flex;
+		justify-content: center;
+		margin-top: auto;
+		margin-bottom: 15px;
+
+		img {
+			width: auto;
+			max-height: 477px;
+		}
+	}
+
+	// .modal__name
+	&__name {
+		margin-bottom: 15px;
+		font-size: rem(30);
+		font-weight: 500;
+		text-align: center;
+		text-transform: uppercase;
+
+		span {
+			font-size: rem(20);
+			font-weight: 400;
+			text-transform: lowercase;
+		}
+
+		&._gold {
+			font-size: rem(25);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			line-height: 1.2;
+			padding: 15px 0 10px;
+			min-height: 87px;
+			background: $gradient-gold;
+		}
+	}
+
+	// .modal__tag
+	&__tag {
+		display: table;
+		padding: 9px 30px;
+		margin: 0 auto;
+		font-size: rem(20);
+		font-weight: 400;
+		text-align: center;
+		text-transform: lowercase;
+		background: $white;
+		border: 1px solid $black;
+		border-radius: 50px;
+
+		b {
+			margin-left: 20px;
+			font-weight: 500;
+		}
+	}
+}

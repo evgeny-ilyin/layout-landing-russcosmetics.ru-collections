@@ -798,3 +798,46 @@
 	top: 10%;
 	left: -185px;
 }
+
+
+
+
+
+
+
+
+
+.m-decor-drops-center {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	background: url(../img/decor/decor-drops.png) center / contain no-repeat;
+	z-index: 2;
+}
+
+.m-decor-drops-center {
+	width: 25%;
+	height: 25%;
+	top: 70%;
+	left: 30%;
+}
+
+
+
+
+
+
+.m-decor-drops-xl-left-bottom {
+	margin: 0;
+	padding: 0;
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	background: url(../img/decor/decor-drops-xl.png) center / cover no-repeat;
+	z-index: 2;
+}
+
+.m-decor-drops-xl-left-bottom {
+	bottom: 0;
+	left: -50px;
+}
