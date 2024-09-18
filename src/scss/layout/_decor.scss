@@ -783,13 +783,17 @@
 	width: 538px;
 	height: 380px;
 	position: absolute;
-	background: url(../img/decor/decor-drops-xl.png) center / contain no-repeat;
+	background: url(../img/decor/decor-drops-xl.png) center / cover no-repeat;
 	z-index: 2;
 }
 
 .s-decor-drops-xl-center-bottom {
 	bottom: 0;
 	left: 37%;
+
+	@include resp-to(md) {
+		height: 100px;
+	}
 }
 
 .s-decor-drops-xl-left {
