@@ -101,7 +101,7 @@
 		list-style-type: none;
 		margin: var(--submenu-gap) 0 0;
 		padding: 0;
-		
+
 		@include resp-from(md) {
 			position: absolute;
 			z-index: 5;
@@ -147,8 +147,25 @@
 			}
 		}
 	}
-	// .nav__link
-	&__link {
+
+	// .nav__logo
+	&__logo {
+		filter: grayscale(1);
+		opacity: 0.6;
+		border: 0 !important;
+		width: 180px;
+		transition: all $transition-default;
+
+		@include on-hover {
+			filter: grayscale(0);
+			opacity: 1;
+		}
+
+		@include resp-from(md) {
+			width: 117px;
+			padding: 5px 0 !important;
+			margin-bottom: 10px !important;
+		}
 	}
 }
 
