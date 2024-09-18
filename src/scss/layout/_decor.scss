@@ -783,7 +783,7 @@
 	width: 538px;
 	height: 380px;
 	position: absolute;
-	background: url(../img/decor/decor-drops-xl.png) center / cover no-repeat;
+	background: url(../img/decor/decor-drops-xl.png) center / contain no-repeat;
 	z-index: 2;
 }
 
@@ -799,15 +799,11 @@
 	left: -185px;
 }
 
-
-
-
-
-
-
-
-
-.m-decor-drops-center {
+.m-decor-drops-left,
+.m-decor-drops-top,
+.m-decor-drops-center,
+.m-decor-drops-center-top,
+.m-decor-drops-center-bottom {
 	margin: 0;
 	padding: 0;
 	position: absolute;
@@ -815,18 +811,126 @@
 	z-index: 2;
 }
 
-.m-decor-drops-center {
-	width: 25%;
-	height: 25%;
+.m-decor-drops-left {
+	width: 100px;
+	height: 100px;
 	top: 70%;
-	left: 30%;
+	left: -40px;
+	transform: rotate(90deg);
+
+	&._v2 {
+		width: 20%;
+		height: 20%;
+		top: auto;
+		bottom: 5%;
+		left: -50px;
+		transform: none;
+	}
 }
 
+.m-decor-drops-top {
+	width: 100px;
+	height: 100px;
+	top: 8%;
+	left: 34%;
 
+	&._v2 {
+		width: 20%;
+		height: 20%;
+		top: -100px;
+		left: 30%;
+		transform: scaleX(-1) rotate(-99deg);
+	}
 
+	&._v3 {
+		width: 30%;
+		height: 30%;
+		top: -170px;
+		left: 23%;
+		transform: scaleX(-1) rotate(-99deg);
+	}
 
+	&._v4 {
+		width: 16%;
+		height: 16%;
+		top: 30px;
+		left: 40%;
+		transform: rotate(110deg);
+		opacity: 0.5;
+	}
+}
 
+.m-decor-drops-center {
+	width: 20%;
+	height: 20%;
+	top: 70%;
+	left: 30%;
 
+	&._v2 {
+		width: 106px;
+		height: 80px;
+		top: 60%;
+		left: 35%;
+		transform: rotate(-50deg);
+	}
+}
+
+.m-decor-drops-center-top {
+	width: 17%;
+	height: 17%;
+	top: 5%;
+	left: 33%;
+
+	&._v2 {
+		height: 226px;
+		top: -160px;
+		left: 33%;
+		transform: rotate(-90deg) scaleY(-1);
+	}
+
+	&._v3 {
+		height: 113px;
+		top: 5%;
+		left: 30%;
+	}
+}
+
+.m-decor-drops-center-bottom {
+	width: 20%;
+	height: 20%;
+	top: 70%;
+	left: 30%;
+
+	&._v2 {
+		top: auto;
+		bottom: -50px;
+	}
+
+	&._v3 {
+		width: 10%;
+		top: auto;
+		bottom: -50px;
+		left: 20%;
+	}
+
+	&._v4 {
+		top: auto;
+		left: 20%;
+		bottom: -110px;
+		transform: scaleX(-1) rotate(90deg);
+	}
+
+	&._v5 {
+		top: auto;
+		left: 45%;
+		bottom: -110px;
+		transform: scaleX(-1) rotate(90deg);
+	}
+}
+
+.m-decor-drops-xl-center-top,
+.m-decor-drops-xl-center-bottom,
+.m-decor-drops-xl-left,
 .m-decor-drops-xl-left-bottom {
 	margin: 0;
 	padding: 0;
@@ -837,7 +941,421 @@
 	z-index: 2;
 }
 
+.m-decor-drops-xl-center-top {
+	top: 0;
+	left: 38%;
+	transform: scaleY(-1);
+	width: 190px;
+	height: 190px;
+}
+
+.m-decor-drops-xl-center-bottom {
+	left: 50%;
+	bottom: -20px;
+	width: 110px;
+	height: 110px;
+
+	&._v2 {
+		left: 30%;
+		bottom: -10px;
+		width: 80px;
+		height: 80px;
+	}
+}
+
+.m-decor-drops-xl-left {
+	width: 180px;
+	height: 180px;
+	bottom: 80px;
+	left: -10px;
+	transform: rotate(90deg);
+}
+
 .m-decor-drops-xl-left-bottom {
 	bottom: 0;
 	left: -50px;
+}
+
+.m-decor-coconut-left,
+.m-decor-coconut-center,
+.m-decor-coconut-bottom {
+	margin: 0;
+	padding: 0;
+	width: 158px;
+	height: 245px;
+	position: absolute;
+	background: url(../img/decor/decor-coconut-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-coconut-left {
+	transform: scaleX(-1) rotate(10deg);
+	left: 10%;
+	bottom: 0;
+}
+.m-decor-coconut-center {
+	width: 111px;
+	height: 172px;
+	transform: scaleX(-1) rotate(10deg);
+	left: 45%;
+	top: 20%;
+}
+.m-decor-coconut-bottom {
+	width: 103px;
+	height: 159px;
+	left: 40%;
+	bottom: 30px;
+}
+
+.m-decor-almond-bottom,
+.m-decor-almond-left {
+	margin: 0;
+	padding: 0;
+	width: 164px;
+	height: 110px;
+	position: absolute;
+	background: url(../img/decor/decor-almond-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-almond-bottom {
+	width: 177px;
+	height: 118px;
+	bottom: 0;
+	left: 43%;
+}
+.m-decor-almond-left {
+	left: 3%;
+	bottom: 2%;
+}
+
+.m-decor-bergamot-left,
+.m-decor-bergamot-top,
+.m-decor-bergamot-center,
+.m-decor-bergamot-bottom {
+	margin: 0;
+	padding: 0;
+	width: 168px;
+	height: 168px;
+	position: absolute;
+	background: url(../img/decor/decor-bergamot-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-bergamot-left {
+	left: 7%;
+	bottom: 2%;
+}
+.m-decor-bergamot-top {
+	width: 135px;
+	height: 135px;
+	left: 45%;
+	top: 20%;
+}
+.m-decor-bergamot-center {
+	width: 90px;
+	height: 90px;
+	left: 45%;
+	bottom: 45%;
+}
+.m-decor-bergamot-bottom {
+	width: 140px;
+	height: 140px;
+	left: 22%;
+	bottom: 2%;
+}
+
+.m-decor-avocado-top,
+.m-decor-avocado-center,
+.m-decor-avocado-center-bottom {
+	margin: 0;
+	padding: 0;
+	width: 325px;
+	height: 216px;
+	position: absolute;
+	background: url(../img/decor/decor-avocado-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-avocado-top {
+	width: 150px;
+	transform: scale(-1) rotate(30deg);
+	left: 40%;
+	top: -30px;
+}
+.m-decor-avocado-center {
+	width: 160px;
+	transform: scale(-1) rotate(-30deg);
+	left: 30%;
+	bottom: 10%;
+}
+.m-decor-avocado-center-bottom {
+	width: 200px;
+	transform: scale(-1) rotate(-10deg);
+	left: 35%;
+	bottom: 0;
+
+	&._v2 {
+		width: 130px;
+		left: 42%;
+	}
+
+	&._v3 {
+		left: 20%;
+	}
+}
+
+.m-decor-grapefruit-top,
+.m-decor-grapefruit-center {
+	margin: 0;
+	padding: 0;
+	width: 178px;
+	height: 220px;
+	position: absolute;
+	background: url(../img/decor/decor-grapefruit-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-grapefruit-top {
+	left: 42%;
+	top: 20%;
+	width: 56px;
+	height: 68px;
+
+	&._v2 {
+		left: 45%;
+		width: 130px;
+		height: 161px;
+		transform: scaleX(-1);
+	}
+}
+.m-decor-grapefruit-center {
+	left: 35%;
+	bottom: 3%;
+
+	&._v2 {
+		left: 40%;
+		bottom: 5%;
+		width: 114px;
+		height: 140px;
+		transform: scaleX(-1);
+	}
+}
+
+.m-decor-rosem-top,
+.m-decor-rosem-bottom,
+.m-decor-rosem-center,
+.m-decor-rosem-bottom-center {
+	margin: 0;
+	padding: 0;
+	width: 76px;
+	height: 131px;
+	position: absolute;
+	background: url(../img/decor/decor-rosem-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-rosem-top {
+	left: 35%;
+	top: 10%;
+	transform: rotate(30deg);
+
+	&._v2 {
+		left: 48%;
+		top: 13%;
+		width: 130px;
+		height: 161px;
+		transform: rotate(-20deg);
+	}
+}
+.m-decor-rosem-bottom {
+	width: 173px;
+	height: 173px;
+	left: 2%;
+	bottom: 2%;
+	transform: rotate(-25deg);
+}
+.m-decor-rosem-center {
+	width: 153px;
+	height: 153px;
+	left: 43%;
+	top: 40%;
+	transform: rotate(20deg);
+}
+.m-decor-rosem-bottom-center {
+	width: 153px;
+	height: 153px;
+	left: 40%;
+	bottom: 2%;
+	transform: rotate(-25deg);
+}
+
+.m-decor-pepper-top {
+	margin: 0;
+	padding: 0;
+	width: 94px;
+	height: 168px;
+	position: absolute;
+	background: url(../img/decor/decor-pepper-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-pepper-top {
+	left: 45%;
+	top: 10%;
+	transform: rotate(-20deg);
+}
+
+.m-decor-macad-center-1-mid,
+.m-decor-macad-1-bottom,
+.m-decor-macad-1-top {
+	margin: 0;
+	padding: 0;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	background: url(../img/decor/decor-macad-1-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-macad-center-1-mid {
+	left: 25%;
+	bottom: 20%;
+}
+.m-decor-macad-1-bottom {
+	left: 45%;
+	bottom: 5%;
+}
+.m-decor-macad-1-top {
+	left: 48%;
+	top: 22%;
+}
+
+.m-decor-macad-2-bottom,
+.m-decor-macad-2-center {
+	margin: 0;
+	padding: 0;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	background: url(../img/decor/decor-macad-2-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-macad-2-bottom {
+	left: 40%;
+	bottom: 5%;
+
+	&._v2 {
+		width: 50px;
+		height: 50px;
+		left: 46%;
+		bottom: 7%;
+	}
+
+	&._v3 {
+		width: 50px;
+		height: 50px;
+		left: 15%;
+		bottom: 2%;
+	}
+}
+.m-decor-macad-2-center {
+	left: 48%;
+	bottom: 30%;
+}
+
+.m-decor-squash-bottom {
+	margin: 0;
+	padding: 0;
+	width: 90px;
+	height: 59px;
+	position: absolute;
+	background: url(../img/decor/decor-squash-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-squash-bottom {
+	left: 44%;
+	bottom: 5%;
+}
+
+.m-decor-argana-bottom {
+	margin: 0;
+	padding: 0;
+	width: 134px;
+	height: 95px;
+	position: absolute;
+	background: url(../img/decor/decor-argana-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-argana-bottom {
+	bottom: 3%;
+	left: 45%;
+}
+
+.m-decor-argana-2-top,
+.m-decor-argana-2-bottom,
+.m-decor-argana-2-bottom-left {
+	margin: 0;
+	padding: 0;
+	width: 134px;
+	height: 95px;
+	position: absolute;
+	background: url(../img/decor/decor-argana-2-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-argana-2-bottom {
+	width: 86px;
+	height: 70px;
+	bottom: 1%;
+	left: 10%;
+}
+.m-decor-argana-2-top {
+	width: 86px;
+	height: 70px;
+	top: 10%;
+	left: 42%;
+	transform: rotate(-15deg);
+}
+.m-decor-argana-2-bottom-left {
+	bottom: 1%;
+	left: 1%;
+}
+
+.m-decor-xz-oil-2-bottom {
+	margin: 0;
+	padding: 0;
+	width: 111px;
+	height: 163px;
+	position: absolute;
+	background: url(../img/decor/decor-xz-oil-2-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-xz-oil-2-bottom {
+	bottom: 20%;
+	left: 47%;
+}
+
+.m-decor-pantenol-left,
+.m-decor-pantenol-center {
+	margin: 0;
+	padding: 0;
+	width: 121px;
+	height: 121px;
+	position: absolute;
+	background: url(../img/decor/decor-pantenol.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-pantenol-left {
+	bottom: 20%;
+	left: 15%;
+}
+.m-decor-pantenol-center {
+	bottom: 25%;
+	left: 42%;
+}
+
+.m-decor-keratin-center {
+	margin: 0;
+	padding: 0;
+	width: 196px;
+	height: 211px;
+	position: absolute;
+	background: url(../img/decor/decor-keratin-color.png) center / contain no-repeat;
+	z-index: 2;
+}
+.m-decor-keratin-center {
+	bottom: 2%;
+	left: 35%;
 }
