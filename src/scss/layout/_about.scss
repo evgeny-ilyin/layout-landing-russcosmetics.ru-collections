@@ -77,6 +77,7 @@
 	&__bottom-text {
 		flex: 1 1 100%;
 		font-size: clamp(rem(20), 2.2vw, rem(30));
+		font-size: clamp(rem(20), 2.2dvw, rem(30));
 		font-weight: 300;
 		text-align: center;
 	}
