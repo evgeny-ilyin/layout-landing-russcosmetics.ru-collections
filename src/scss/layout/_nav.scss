@@ -72,7 +72,11 @@
 
 		&:last-child {
 			.nav__sub {
-				left: 0;
+				@include resp-to(lg) {
+					right: 0;
+					left: auto;
+					transform: none;
+				}
 
 				@include resp-from(lg) {
 					left: 50%;
