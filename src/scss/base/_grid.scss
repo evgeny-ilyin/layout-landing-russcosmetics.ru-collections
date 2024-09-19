@@ -28,7 +28,7 @@
 	padding-right: $min-padding;
 	position: relative;
 
-	@include resp-from(lg) {
+	@include resp-from(xl) {
 		padding-left: $max-padding;
 		padding-right: $max-padding;
 	}
