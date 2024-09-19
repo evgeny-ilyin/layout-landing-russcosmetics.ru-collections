@@ -5,14 +5,8 @@ addEventListener("DOMContentLoaded", () => {
 	// useDynamicAdapt();
 
 	fn.isWebp();
-	// fn.isTouchDevice();
-	// fn.cardInfoHandler();
-
-	// fn.isWebp();
-	// fn.stickyHeader();
-	// fn.closeMenuHandler();
+	fn.collectionOnHover();
 });
 
 // import "./modules/cookies.js";
 import "./modules/fancyapps.js";
-

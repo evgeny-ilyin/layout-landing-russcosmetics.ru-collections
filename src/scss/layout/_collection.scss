@@ -1,0 +1,292 @@
+.collection {
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../img/collection/c-bgr.png) 100% 0 / 30% no-repeat;
+		z-index: -1;
+	}
+	// .collection__logo
+	&__logo {
+		margin-top: 40px;
+
+		@include resp-from(lg) {
+			margin-top: 70px;
+		}
+
+		img {
+			width: 200px;
+
+			@include resp-from(lg) {
+				width: 362px;
+			}
+		}
+	}
+
+	// .collection__text
+	&__text {
+		margin-top: 30px;
+		font-size: rem(18);
+
+		@include resp-from(md) {
+			width: 80%;
+		}
+
+		@include resp-from(lg) {
+			font-size: rem(20);
+			margin-top: 50px;
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(25);
+			width: 67%;
+		}
+	}
+
+	// .collection__header
+	&__header {
+		font-family: $family-garamond;
+		font-size: clamp(rem(18), 8vw, rem(121));
+		font-size: clamp(rem(18), 8dvw, rem(121));
+		line-height: 1;
+		text-transform: uppercase;
+		font-style: italic;
+		font-weight: 300;
+		margin-top: 190px;
+
+		@include resp-to(md) {
+			display: none;
+		}
+	}
+
+	// .collection__circle
+	&__circle {
+		overflow: hidden;
+
+		@include resp-from(md) {
+			height: 470px;
+		}
+
+		@include resp-from(lg) {
+			height: 600px;
+		}
+
+		@include resp-from(xl) {
+			height: 750px;
+		}
+
+		@include resp-from(hd) {
+			height: 870px;
+		}
+	}
+}
+
+.circle {
+	display: grid;
+	grid-template-areas: "layer";
+	place-items: center;
+	border-radius: 50%;
+	border: 2px solid $black;
+
+	--radius: 220px;
+	width: calc(2 * var(--radius));
+	height: calc(2 * var(--radius));
+
+	position: relative;
+	margin-top: 90px;
+
+	@include resp-to(md) {
+		display: none;
+	}
+
+	@include resp-from(md) {
+		--radius: 220px;
+		margin-left: 120px;
+	}
+
+	@include resp-from(lg) {
+		--radius: 300px;
+		margin-left: 150px;
+	}
+
+	@include resp-from(xl) {
+		--radius: 400px;
+	}
+
+	@include resp-from(hd) {
+		--radius: 470px;
+	}
+
+	// .circle__item
+	&__item {
+		grid-area: layer;
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		border: 1px solid $black;
+		background: $white;
+		display: grid;
+		place-items: center;
+
+		// Decimal value, 0-1 based on the child's index.
+		--d: calc(var(--i) / var(--total));
+		// Offset to get better starting placement on the circle
+		--r-offset: -0.625turn;
+		// Full circle
+		--r-amount: 1turn;
+		// Rotation based on the decimal and r modifiers
+		--r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+		// Rotate, transform out, then negative rotation so the content appears upright
+		--transform: rotate(var(--r)) translate(var(--radius)) rotate(calc(-1 * var(--r)));
+
+		transform: var(--transform);
+		// transition: transform 1.5s ease-in-out;
+
+		&._hidden {
+			display: none;
+		}
+
+		@include on-hover {
+			.circle__img {
+				--size: 100px;
+				width: var(--size);
+				height: var(--size);
+				border: 2px solid $black;
+
+				@include resp-from(md) {
+					--size: 100px;
+				}
+
+				@include resp-from(lg) {
+					--size: 130px;
+				}
+
+				@include resp-from(xl) {
+					--size: 150px;
+				}
+
+				@include resp-from(hd) {
+					--size: 175px;
+				}
+			}
+		}
+	}
+
+	// .circle__note
+	&__note {
+		position: relative;
+		top: -5px;
+		left: 40px;
+		font-size: rem(14);
+		text-transform: uppercase;
+		opacity: 0.7;
+
+		@include resp-from(lg) {
+			font-size: rem(16);
+			top: -15px;
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(20);
+			white-space: nowrap;
+		}
+
+		&._left {
+			left: auto;
+			right: calc(100% + 15px);
+		}
+	}
+
+	// .circle__img
+	&__img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		width: 0;
+		height: 0;
+		transition: all $transition-default;
+		background: $white;
+		border-radius: 50%;
+
+		img {
+			padding: 20px;
+
+			@include resp-from(md) {
+				padding: 20px;
+			}
+
+			@include resp-from(lg) {
+				padding: 15px;
+			}
+
+			@include resp-from(xl) {
+				padding: 10px;
+			}
+
+			@include resp-from(hd) {
+				padding: 0;
+			}
+		}
+	}
+
+	// .circle__data
+	&__data {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		width: 80%;
+		text-align: center;
+
+		& > div {
+			position: absolute;
+			opacity: 0;
+			transition: opacity $transition-default;
+
+			&.is-active {
+				opacity: 1;
+			}
+		}
+	}
+
+	// .circle__h
+	&__h {
+		font-size: rem(20);
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+
+		@include resp-from(lg) {
+			font-size: rem(32);
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(36);
+			margin-bottom: 27px;
+		}
+
+		@include resp-from(hd) {
+			font-size: rem(40);
+		}
+	}
+
+	// .circle__d
+	&__d {
+		@include resp-from(lg) {
+			font-size: rem(20);
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(22);
+		}
+
+		@include resp-from(hd) {
+			font-size: rem(25);
+		}
+	}
+}
