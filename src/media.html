@@ -1,0 +1,19 @@
+@@include('html/components/head.html', {
+"title": "Миссия — Русская косметика"
+})
+<body>
+	@@include('html/layout/header.html', {})
+
+	<main class="container">
+		<div class="content">
+			<ul class="breadcrumb">
+				<li>Фото и видео</li>
+				<li><a href="/">Бренд русская косметика</a></li>
+			</ul>
+			@@include('html/layout/media.html', {})
+		</div>
+	</main>
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>
