@@ -4761,6 +4761,50 @@ ol {
   text-transform: uppercase;
   margin-bottom: 15px
 }
+.media {
+  margin-top: 50px
+}
+.media .responsive-container-block {
+  min-height: 75px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start
+}
+.media .responsive-container-block.bg {
+  margin: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.media .img {
+  width: 100%;
+  padding: 5px
+}
+.media .responsive-container-block.img-cont {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 33.3%;
+  min-height: auto;
+  height: 100%
+}
+.media .img.img-big {
+  height: 50%
+}
 .about {
   margin: 35px 0 20px
 }
@@ -5588,6 +5632,30 @@ input[type=checkbox]:disabled {
     display: none
   }
 }
+@media (max-width:768px) {
+  .media .img {
+    max-width: 32.5%
+  }
+  .media .responsive-container-block.bg {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .media .responsive-container-block.img-cont {
+    max-width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+  }
+  .media .img.img-big {
+    max-width: 49%
+  }
+}
 @media (max-width:767px) {
   .menu-wrapper {
     display: -webkit-box;
@@ -5650,6 +5718,24 @@ input[type=checkbox]:disabled {
   }
   .circle {
     display: none
+  }
+}
+@media (max-width:500px) {
+  .media .img {
+    max-width: 94%
+  }
+  .media .responsive-container-block.img-cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px
+  }
+  .media .img.img-big {
+    max-width: 94%
   }
 }
 @media (hover:hover) {
