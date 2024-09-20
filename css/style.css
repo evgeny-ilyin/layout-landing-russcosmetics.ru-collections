@@ -3004,7 +3004,7 @@ ol {
   margin: 0
 }
 .nav__sub li:last-child a {
-  margin-bottom: 0
+  margin-bottom: 0!important
 }
 .nav__sub a {
   color: var(--gray);
