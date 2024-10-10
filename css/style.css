@@ -3000,6 +3000,16 @@ ol {
   margin: var(--submenu-gap) 0 0;
   padding: 0
 }
+.nav__sub ul {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none
+}
+.nav__sub ul.is-active {
+  display: block;
+  margin-top: 20px
+}
 .nav__sub li {
   margin: 0
 }
@@ -3017,6 +3027,10 @@ ol {
   border-bottom: 1px solid transparent
 }
 .nav__sub a:hover {
+  color: var(--black);
+  border-bottom-color: currentColor
+}
+.nav__sub a.is-active {
   color: var(--black);
   border-bottom-color: currentColor
 }
@@ -4888,6 +4902,35 @@ ul.breadcrumb li a {
 ul.breadcrumb li a:hover {
   color: var(--black)
 }
+.collection-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 5px
+}
+.collection-nav a {
+  color: var(--gray);
+  display: inline-block;
+  padding: 2px 10px;
+  margin-bottom: 9px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 1px solid transparent
+}
+.collection-nav a:hover {
+  color: var(--black);
+  border-bottom-color: currentColor
+}
+.collection-nav a.is-active {
+  color: var(--black);
+  border-bottom-color: currentColor
+}
 .btn {
   background: var(--white);
   border-radius: 5px;
@@ -5166,6 +5209,10 @@ input[type=checkbox]:disabled {
   }
   ul.breadcrumb li {
     font-size: 1.125rem
+  }
+  .collection-nav a {
+    padding: 2px 14px;
+    margin-bottom: 18px
   }
 }
 @media (min-width:1024px) {
@@ -5587,6 +5634,9 @@ input[type=checkbox]:disabled {
   }
   ul.breadcrumb li {
     font-size: 1.5625rem
+  }
+  .collection-nav a {
+    font-size: 1.25rem
   }
 }
 @media (min-width:1440px) {

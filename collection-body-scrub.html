@@ -8,9 +8,9 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&v=20240920112053" rel="stylesheet">
-	<link rel="stylesheet" href="css/root-vars.css?v=20240920112053">
-	<link rel="stylesheet" href="css/style.css?v=20240920112053">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&v=20241010120308" rel="stylesheet">
+	<link rel="stylesheet" href="css/root-vars.css?v=20241010120308">
+	<link rel="stylesheet" href="css/style.css?v=20241010120308">
 	<title>Русская косметика</title>
 	<meta name="description" content="Русская косметика">
 </head>
@@ -44,11 +44,15 @@
 								</li>
 								<li class="nav__item"><span class="nav__parent">КОЛЛЕКЦИИ</span>
 									<ul class="nav__sub">
-										<li><a href="javascript:void(0)">драгоценные масла</a></li>
-										<li><a href="javascript:void(0)">для волос</a></li>
-										<li><a href="javascript:void(0)">для тела</a></li>
-										<li><a href="javascript:void(0)">для лица</a></li>
-										<li><a href="javascript:void(0)">мини форматы</a></li>
+										<li><a href="javascript:void(0)" class="js-show-submenu">драгоценные масла</a>
+											<ul>
+												<li><a href="/collection.html">описание</a></li>
+												<li><a href="javascript:void(0)">для волос</a></li>
+												<li><a href="javascript:void(0)">для тела</a></li>
+												<li><a href="javascript:void(0)">для лица</a></li>
+												<li><a href="javascript:void(0)">мини форматы</a></li>
+											</ul>
+										</li>
 									</ul>
 								</li>
 								<li class="nav__item"><span class="nav__parent">КУПИТЬ</span>
@@ -84,6 +88,12 @@
 	</header>
 
 	<main class="container">
+		<div class="content collection-nav">
+			<a href="#" class="is-active">ссылка 1</a>
+			<a href="#">ссылка 2</a>
+			<a href="#">ссылка 3</a>
+			<a href="#">ссылка 4</a>
+		</div>
 		<div class="content carousel-wrapper">
 			<div class="f-carousel carousel">
 				<div class="f-carousel__slide">
@@ -306,7 +316,7 @@
 			</defs>
 		</symbol>
 	</svg>
-	<script src="js/app.js?v=20240920112053"></script>
+	<script src="js/app.js?v=20241010120308"></script>
 
 </body>
 
