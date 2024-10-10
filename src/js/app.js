@@ -6,6 +6,7 @@ addEventListener("DOMContentLoaded", () => {
 
 	fn.isWebp();
 	fn.collectionOnHover();
+	fn.menuClickHandler();
 });
 
 // import "./modules/cookies.js";

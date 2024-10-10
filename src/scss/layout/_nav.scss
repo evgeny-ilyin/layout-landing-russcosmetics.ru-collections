@@ -120,6 +120,18 @@
 			transform: translateX(-50%);
 		}
 
+		ul {
+			display: none;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+
+			&.is-active {
+				display: block;
+				margin-top: 20px;
+			}
+		}
+
 		li {
 			margin: 0;
 
@@ -148,6 +160,11 @@
 			@include resp-from(md) {
 				padding: 2px 28px;
 				margin-bottom: 18px;
+			}
+
+			&.is-active {
+				color: $black;
+				border-bottom-color: currentColor;
 			}
 		}
 	}

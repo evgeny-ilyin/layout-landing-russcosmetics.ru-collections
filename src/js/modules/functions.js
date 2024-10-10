@@ -45,3 +45,17 @@ export function collectionOnHover() {
 		el.addEventListener("mouseleave", handleLeave);
 	});
 }
+
+export function menuClickHandler() {
+	const triggerClass = "js-show-submenu",
+		activeClass = "is-active";
+
+	document.addEventListener("click", (e) => {
+		if (e.target.closest(`.${triggerClass}`)) {
+			const subMenu = e.target.closest("li").querySelector("ul");
+			e.target.classList.toggle(activeClass);
+			if(subMenu)
+			subMenu.classList.toggle(activeClass);
+		}
+	});
+}
