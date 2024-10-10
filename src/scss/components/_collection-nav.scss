@@ -1,0 +1,36 @@
+.collection-nav {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5px;
+
+	a {
+		color: $gray;
+		display: inline-block;
+		padding: 2px 10px;
+		margin-bottom: 9px;
+		text-align: center;
+		white-space: nowrap;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+
+		@include on-hover {
+			color: $black;
+			border-bottom-color: currentColor;
+		}
+
+		@include resp-from(md) {
+			padding: 2px 14px;
+			margin-bottom: 18px;
+		}
+
+		@include resp-from(xl) {
+			font-size: rem(20);
+		}
+
+		&.is-active {
+			color: $black;
+			border-bottom-color: currentColor;
+		}
+	}
+}

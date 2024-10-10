@@ -1,15 +1,16 @@
 @@include('html/components/head.html', {
-	"title": "Русская косметика"
-	})
-	<body>
-		@@include('html/layout/header.html', {})
-	
-		<main class="container">
-			<div class="content carousel-wrapper">
-				@@include('html/layout/carousel-hair-balm.html', {})
-			</div>
-		</main>
-		@@include('html/components/svg-sprite.html', {})
-		@@include('html/components/scripts.html', {})
-	</body>
-	</html>
+"title": "Русская косметика"
+})
+<body>
+	@@include('html/layout/header.html', {})
+
+	<main class="container">
+		@@include('html/components/collection-nav.html', {})
+		<div class="content carousel-wrapper">
+			@@include('html/layout/carousel-hair-balm.html', {})
+		</div>
+	</main>
+	@@include('html/components/svg-sprite.html', {})
+	@@include('html/components/scripts.html', {})
+</body>
+</html>
