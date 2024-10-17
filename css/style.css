@@ -4695,6 +4695,9 @@ ol {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  cursor: pointer;
+  -webkit-transition: text-shadow 250ms ease-in-out;
+  transition: text-shadow 250ms ease-in-out;
   --d: calc(var(--i) / var(--total));
   --r-offset: -0.625turn;
   --r-amount: 1turn;
@@ -4707,7 +4710,13 @@ ol {
 .circle__item._hidden {
   display: none
 }
-.circle__item:hover .circle__img {
+.circle__item:hover {
+  text-shadow: 0 0 0
+}
+.circle__item.is-active {
+  text-shadow: 0 0 0
+}
+.circle__item.is-active .circle__img {
   --size: 100px;
   width: var(--size);
   height: var(--size);
@@ -5201,7 +5210,7 @@ input[type=checkbox]:disabled {
     --radius: 220px;
     margin-left: 120px
   }
-  .circle__item:hover .circle__img {
+  .circle__item.is-active .circle__img {
     --size: 100px
   }
   .circle__img img {
@@ -5440,7 +5449,7 @@ input[type=checkbox]:disabled {
     --radius: 300px;
     margin-left: 150px
   }
-  .circle__item:hover .circle__img {
+  .circle__item.is-active .circle__img {
     --size: 130px
   }
   .circle__note {
@@ -5599,7 +5608,7 @@ input[type=checkbox]:disabled {
   .circle {
     --radius: 400px
   }
-  .circle__item:hover .circle__img {
+  .circle__item.is-active .circle__img {
     --size: 150px
   }
   .circle__note {
@@ -5649,7 +5658,7 @@ input[type=checkbox]:disabled {
   .circle {
     --radius: 470px
   }
-  .circle__item:hover .circle__img {
+  .circle__item.is-active .circle__img {
     --size: 175px
   }
   .circle__img img {
