@@ -23,6 +23,8 @@ export function collectionOnHover() {
 		dataWrapper = document.querySelector(".circle__data");
 
 	let handleHover = (e) => {
+		handleLeave();
+
 		let item = e.target.closest(`.${itemClass}`),
 			dataId = item.dataset.item;
 		if (!dataId) {
@@ -32,17 +34,22 @@ export function collectionOnHover() {
 		let target = dataWrapper.querySelector(`[data-item=${dataId}]`);
 		if (!target) return;
 		target.classList.add(activeClass);
+		item.classList.add(activeClass);
 	};
 
 	let handleLeave = () => {
-		let activeItem = document.querySelector(`.${activeClass}`);
+		let activeItem = document.querySelectorAll(`.${activeClass}`);
 		if (!activeItem) return;
-		activeItem.classList.remove(activeClass);
+		// activeItem.classList.remove(activeClass);
+		activeItem.forEach((el) => {
+			el.classList.remove(activeClass);
+		});
 	};
 
 	items.forEach((el) => {
-		el.addEventListener("mouseover", handleHover);
-		el.addEventListener("mouseleave", handleLeave);
+		// el.addEventListener("mouseover", handleHover);
+		// el.addEventListener("mouseleave", handleLeave);
+		el.addEventListener("click", handleHover);
 	});
 }
 
@@ -54,8 +61,7 @@ export function menuClickHandler() {
 		if (e.target.closest(`.${triggerClass}`)) {
 			const subMenu = e.target.closest("li").querySelector("ul");
 			e.target.classList.toggle(activeClass);
-			if(subMenu)
-			subMenu.classList.toggle(activeClass);
+			if (subMenu) subMenu.classList.toggle(activeClass);
 		}
 	});
 }

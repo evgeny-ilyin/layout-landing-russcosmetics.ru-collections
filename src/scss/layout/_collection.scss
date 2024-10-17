@@ -131,6 +131,8 @@
 		background: $white;
 		display: grid;
 		place-items: center;
+		cursor: pointer;
+		transition: text-shadow $transition-default;
 
 		// Decimal value, 0-1 based on the child's index.
 		--d: calc(var(--i) / var(--total));
@@ -151,6 +153,35 @@
 		}
 
 		@include on-hover {
+			// .circle__img {
+			// 	--size: 100px;
+			// 	width: var(--size);
+			// 	height: var(--size);
+			// 	border: 2px solid $black;
+
+			// 	@include resp-from(md) {
+			// 		--size: 100px;
+			// 	}
+
+			// 	@include resp-from(lg) {
+			// 		--size: 130px;
+			// 	}
+
+			// 	@include resp-from(xl) {
+			// 		--size: 150px;
+			// 	}
+
+			// 	@include resp-from(hd) {
+			// 		--size: 175px;
+			// 	}
+			// }
+
+			text-shadow: 0 0 0;
+		}
+
+		&.is-active {
+			text-shadow: 0 0 0;
+
 			.circle__img {
 				--size: 100px;
 				width: var(--size);
